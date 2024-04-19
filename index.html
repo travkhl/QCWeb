@@ -6,10 +6,61 @@
         <meta name="author" content="Travis Lee">
         <meta name="description" 
         content="A brief introduction to the topic of quantum computing and discussion on the beyond-NISQ future.">
+
+
+        <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+        <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
     </head>
 
     <body>
         <p>Hello world</p>
-    </body>
+        <div id="navbar"></div>
 
+        <div class=""></div>
+
+        <div class="section">
+            <h2>What is quantum computing</h2>
+            <p>
+                Quantum computers, like regular or classical computers are circuits. Like classical computers quantum computers have things that store information: registers. and things that act on information stored: gates. That is where the similarities end. That is where the similarities end. While classical computers encode their information in binary, quantum computers encode their information in a complex valued vector space called a Hilbert space. This means that while 1 bit on a classical computer can store 2 values, a 1 or a 0, one qubit on a quantum computer can store 1, 0, or any superposition in between. 
+
+                <!--bloch sphere here-->
+
+                Additionally, quantum computers manipulate the value of these qubits using principles of quantum mechanics. These factors lead to quantum computers having unique capabilities compared to classical computers. 
+            </p>
+        </div>
+
+        <div class="section">
+            <h2>What is a quantum computer</h2>
+
+        </div>
+
+        <div class="section">
+            <h2>What can quantum computers do</h2>
+            <p>
+                So what are the applications that quantum computers will be better at than classical computers?
+            </p>
+            <p>
+                The intrinsically non-deterministic nature of quantum computers makes them particularly interesting for cryptographic applications. In particular, the fact that qubits cannot be intercepted, read, and retransmitted leads to unbreakable encryption. Photons are currently being used as long-distance transmittable qubits to enable this quantum cryptography. Chinese research institutes are well on their way to developing a <a href="https://spacenews.com/china-is-developing-a-quantum-communications-satellite-network/">network for exchanging quantum cryptographic keys</a>. 
+            </p>
+            <p>
+                At the same time, a beyond-NISQ quantum world threatens our current classical security systems. <a href="https://quantum-journal.org/papers/q-2021-04-15-433/">Quantum algorithms</a> will allow the cracking of encrypted data that was previously thought to be secure. 
+            </p>
+            <p>
+                This disruption to our ability to keep secrets from each other will have immense ramifications. There are concerns that groups are collecting encrypted communications over public channels and waiting for the day that quantum computers can unlock them. Imagine which private message, photograph, password, or other digital secret would cause you the most damage if you were to send it to a malicious actor. Now imagine what kind of damage would happen if instead of you, it was your government.  
+            </p>
+        </div>
+
+        <div class="section">
+            <h2>Noisy intermediate state quantum computing</h2>
+            <p>
+                So given that quantum computers exist, and quantum algorithms exist, why have we not seen a noticeable change in our lives? The issue lies in scale. We can only execute these algorithms on a small number of qubits at a small circuit depth before noise becomes the dominating issue. For reference, RSA-2048 is a popular encryption algorithm relying on the difficulty of factoring a large semiprime number. With a classical computer, it is estimated that it would take somewhere in the neighbourhood of 300 trillion years to break. If we could utilize Shor’s algorithm to speed this up, we could crack it in 8 hours. Doing this however, would require a little over 2.6 billion toffoli gates. If we assume an error rate of 0.001% (much better than our current quantum computers), we will receive an error free result with a rate of $$0.99999^{2600000000}$$ or roughly never. 
+            </p>
+            <p>
+                However, a recent <a href="https://s7d9.scene7.com/is/content/quantum/LQ_ErrorCorrectionpdf">paper from Microsoft Azure and Quantinuum</a> suggest a promising step towards less noisy quantum computers. They have managed to demonstrate the use of logical qubits to reduce error rates by a factor of as much as 800x the physical level. While this does not yet signify a universal fault-tolerant quantum computer, it is one step closer to a beyond-NISQ future. 
+            </p>
+        </div>
+    </body>
+    <footer>
+        <a href="mailto:traviskhl@uvic.ca">traviskhl@uvic.ca</a>
+    </footer>
 </html>
