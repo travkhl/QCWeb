@@ -1,0 +1,345 @@
+@import url('https://fonts.googleapis.com/css2?family=Comfortaa&family=Roboto+Slab&display=swap');
+
+body {
+    background-color: #121212; 
+    color: #fff; 
+    font-family: 'Roboto Slab', serif;
+}
+
+h1, h2, h3, h4 {
+    font-family: 'Comfortaa', sans-serif;
+    color: #fff; 
+}
+
+a:visited{
+    color: rgba(255, 153, 0, 0.616)cc;
+}
+
+a{
+    color: #ff9900;
+}
+
+#navbar {
+    background-color: #222; 
+    color: #fff; 
+    overflow: hidden;
+    position: sticky;
+    top: 0;
+    font-weight: bold;
+}
+
+#navbar a {
+    float: left;
+    display: block;
+    color: #f2f2f2;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+}
+
+#navbar a:hover {
+    background-color: #444; 
+}
+
+#navbar a:active {
+    background-color: #000;
+}
+
+#navbar a:focus:active {
+    background-color: #000;
+}
+
+.section {
+    width: 70%;
+    margin: 20px auto;
+    background-color: #333; 
+    padding: 40px;
+    border-radius: 15px;
+    box-shadow: 0 0 20px rgba(255, 255, 255, 0.1); 
+}
+
+#side-by-side {
+    display: flex;
+    justify-content: space-between;
+}
+
+
+footer {
+    background-color: #222; 
+    color: #fff; 
+    text-align: center;
+    padding: 10px;
+}
+
+.about {
+    font-size: 1em;
+    line-height: 1.6em;
+    color: #fff; 
+}
+
+#introduction {
+    position: relative;
+    font-size: 1.2em;
+    line-height: 1.8em;
+    color: #ddd;
+    font-weight: bold;
+    background-color: transparent;
+    min-height:200px;
+}
+
+#introduction+a {
+    color: #ddd;
+}
+#introduction+a:visited {
+    color: #ddd;
+}
+
+#introduction::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url("../assets/spheres.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+    filter: blur(4px);
+    z-index: -1;
+    animation: color-cycle 20s infinite;
+}
+
+@keyframes color-cycle {
+    0% { background-color: darkred; }
+    25% { background-color: darkgoldenrod; }
+    50% { background-color: darkblue; }
+    75% { background-color: darkgreen; }
+    100% { background-color: darkred; }
+}
+
+figure {
+    border: 1px solid #ddd; 
+    border-radius: 4px; 
+    padding: 5px; 
+    width: 90%;  
+}
+
+figcaption {
+    background-color: #333;
+    color: white;
+    font-style: italic;
+    padding: 2px;
+    text-align: center;
+}
+
+
+img, iframe {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 70%;
+    max-width: 600px;
+}
+
+@import url('https://fonts.googleapis.com/css2?family=Comfortaa&family=Roboto+Slab&display=swap');
+
+body {
+    background-color: #121212; 
+    color: #fff; 
+    font-family: 'Roboto Slab', serif;
+}
+
+h1, h2, h3, h4 {
+    font-family: 'Comfortaa', sans-serif;
+    color: #fff; 
+}
+
+#navbar {
+    background-color: #222; 
+    color: #fff; 
+    overflow: hidden;
+    position: sticky;
+    top: 0;
+    font-weight: bold;
+}
+
+#navbar a {
+    float: left;
+    display: block;
+    color: #f2f2f2;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+}
+
+#navbar a:hover {
+    background-color: #444; 
+}
+
+#navbar a:active {
+    background-color: #000;
+}
+
+#navbar a:focus:active {
+    background-color: #000;
+}
+
+.section {
+    width: 70%;
+    margin: 20px auto;
+    background-color: #333; 
+    padding: 40px;
+    border-radius: 15px;
+    box-shadow: 0 0 20px rgba(255, 255, 255, 0.1); 
+}
+
+footer {
+    background-color: #222; 
+    color: #fff; 
+    text-align: center;
+    padding: 10px;
+}
+
+.about {
+    font-size: 1em;
+    line-height: 1.6em;
+    color: #fff; 
+}
+
+#introduction {
+    position: relative;
+    font-size: 1.2em;
+    line-height: 1.8em;
+    color: #ddd;
+    font-weight: bold;
+    background-color: transparent;
+}
+
+#introduction+a {
+    color: #ddd;
+}
+#introduction+a:visited {
+    color: #ddd;
+}
+
+#introduction::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url("../assets/spheres.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+    filter: blur(4px);
+    z-index: -1;
+    animation: color-cycle 20s infinite;
+}
+
+/*demo */
+#banner {
+    background-color: #ff9800;
+    color: white; 
+    padding: 15px; 
+    text-align: center; 
+    border-radius: 2px;  
+    margin: 10px; 
+}
+
+#banner p {
+    margin: 0; 
+    font-size: 1.2em; 
+}
+
+canvas {
+    width: 400px;
+    height: 400px;
+    border-style: solid;
+}
+#canvas-holder {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-family: Arial, sans-serif;
+}
+
+#controls {
+    display: flex;
+    flex-direction: column;
+    width: 300px;
+    background-color: #f5f5f5;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+}
+
+#controls form {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    width: 100%;
+}
+
+#controls .row {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    width: 100%;
+    margin-bottom: 10px;
+}
+
+#controls label {
+    margin: 5px;
+    font-weight: bold;
+}
+
+#controls input[type="number"], #controls input[type="submit"] {
+    padding: 5px;
+    border: none;
+    border-radius: 5px;
+    box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.1);
+}
+
+#controls input[type="checkbox"], #controls input[type="radio"] {
+    margin: 5px;
+}
+
+#controls input[type="submit"] {
+    background-color: #4CAF50;
+    color: white;
+    cursor: pointer;
+}
+
+#controls input[type="submit"]:hover {
+    background-color: #45a049;
+}
+
+/* mobile */
+
+@media screen and (max-width: 650px) {
+    
+    #navbar, .section, footer, .about, #introduction, figure, figcaption, img, iframe {
+         width: 100%;
+    }
+
+    #navbar {
+        position:static;
+    }
+ 
+    #navbar a {
+         float: none; 
+         text-align: center;
+         line-height: 1.2em;
+         padding: 5px 0px; 
+    }
+ 
+    figure {
+         margin-left:auto; 
+         margin-right:auto; 
+    }
+ }
+
+#toggle{
+    background-color: #777;
+}

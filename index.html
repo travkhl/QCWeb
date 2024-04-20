@@ -7,28 +7,41 @@
         <meta name="description" 
         content="A brief introduction to the topic of quantum computing and discussion on the beyond-NISQ future.">
 
-
+        <link rel="stylesheet" type="text/css" href="styles/style.css">
+        <script type="text/x-mathjax-config">
+            MathJax = {
+              tex: {
+                inlineMath: [['$', '$'], ["\\(", "\\)"]],
+                processEscapes: true,
+              }
+            }
+        </script>
+          
         <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
         <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
     </head>
 
     <body>
         <div id="navbar"></div>
-
-        <div class=""></div>
-
+        <div class="section">
+            <h1>Quantum Computing</h1>
+        </div>
         <div class="section">
             <h2>What is quantum computing</h2>
             <p>
                 Quantum computers, like regular or classical computers are circuits. Like classical computers quantum computers have things that store information: registers. and things that act on information stored: gates. That is where the similarities end. That is where the similarities end. While classical computers encode their information in binary, quantum computers encode their information in a complex valued vector space called a Hilbert space. This means that while 1 bit on a classical computer can store 2 values, a 1 or a 0, one qubit on a quantum computer can store 1, 0, or any superposition in between. 
 
                 <!--bloch sphere here-->
+                <figure>
+                    <img src="assets/Bloch_Sphere.svg">
+                    <figcaption>The bloch sphere is a way to represent a single qubit state. A qubit in the \(\ket{1}\) state will be pointing north and a qubit in the \(\ket{0}\) state will be pointing south. Qubits can also exist pointing in any other state between these two computational states.(<a href="https://creativecommons.org/licenses/by-sa/3.0" title="Creative Commons Attribution-Share Alike 3.0">CC BY-SA 3.0</a>, <a href="https://commons.wikimedia.org/w/index.php?curid=5829358">Source</a>)</figcaption>
+                </figure>
 
                 Additionally, quantum computers manipulate the value of these qubits using principles of quantum mechanics. These factors lead to quantum computers having unique capabilities compared to classical computers. 
 
                 For a more in depth explanation, check out this video. 
                 <figure>
-                    <iframe width="560" height="315" src="https://www.youtube-nocookie.com/embed/jHoEjvuPoB8?si=9GdCalfb6EqKnCzB" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                    <iframe height="315" src="https://www.youtube-nocookie.com/embed/jHoEjvuPoB8?si=9GdCalfb6EqKnCzB" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
                     <figcaption> "Quantum Computers, Explained With Quantum Physics". Quanta Magazine</figcaption>
                 </figure>
             </p>
@@ -38,9 +51,23 @@
             <h2>What is a quantum computer</h2>
             <p>Quantum computers come in many types but there are two predominant models at present. Gate-model quantum computers and quantum annealers. Gate model quantum computers represent operations qubits as travelling down wires through gates to complete computations. This will be familiar to anyone who has worked with classical circuits. These gate model quantum circuits are what the most popular quantum algorithms are using.</p>
             <!-- figure containing side by side of quantum circuit and classical circuit-->
+            <figure>
+                <div id="side-by-side">
+                    <img src="assets/original-circuit.svg">
+                    <img src="assets/Basic-Logic-Gates.jpg">
+                </div>
+                <figcaption>A circuit constructed for a gate-model quantum computer (left) and a classical electrical logic cirucit (right)<a href="https://www.computerscience.gcse.guru/theory/logic-circuits">Source</a></figcaption>
+            </figure>
             <p>Quantum annealers work very differently and are used for different applications. The quantum annealing process begins by putting many qubits into each possible computational state. Then, the system evolves according to a programmed set of parameters. As the system evolved, qubits are shaken into the most likely energy states which are then read out. This method proves useful for optimization problems such as graph-coloring, travelling salesman problems, and 3-SAT.</p>
             <!-- figure containing a picture of a quantum annealer and a ibm qc-->
-            
+            <figure>
+                <img src="assets/qc_ibm.jpg">
+            <figcaption>The internals of a quantum computer. Pictured here is an ibm system surounded by plubming for supercooled helium. <a href="https://www.datacenterdynamics.com/en/news/ces-ibm-announces-q-system-one-quantum-computer-9ft-cube/">Source</a></figcaption>
+            </figure>
+            <figure>
+                <img src="assets/dwave_qc.webp">
+                <figcaption>A DWave QPU. Qauntum computers use chips called QPUs (quantum processing units) to create their qubits. <a href="https://quantumzeitgeist.com/canadas-quantum-computing-company-d-wave-launches-leap-2-for-quantum-applications/">Source</a></figcaption>
+            </figure>
 
         </div>
 
@@ -52,6 +79,11 @@
             <p>
                 The intrinsically non-deterministic nature of quantum computers makes them particularly interesting for cryptographic applications. In particular, the fact that qubits cannot be intercepted, read, and retransmitted leads to unbreakable encryption. Photons are currently being used as long-distance transmittable qubits to enable this quantum cryptography. Chinese research institutes are well on their way to developing a <a href="https://spacenews.com/china-is-developing-a-quantum-communications-satellite-network/">network for exchanging quantum cryptographic keys</a>. 
             </p>
+            <figure>
+                <img src="assets/Quantum_teleportation_diagram.png">
+                <figcaption>A diagram for quantum teleportation required for quantum key distribution for quantum cryptographic communications. (<a href="http://www.gnu.org/copyleft/fdl.html" title="GNU Free Documentation License">GFDL</a>, <a href="https://commons.wikimedia.org/w/index.php?curid=116768547">Link</a>)</figcaption>
+                
+            </figure>
             <p>
                 At the same time, a beyond-NISQ quantum world threatens our current classical security systems. <a href="https://quantum-journal.org/papers/q-2021-04-15-433/">Quantum algorithms</a> will allow the cracking of encrypted data that was previously thought to be secure. 
             </p>
@@ -63,8 +95,12 @@
         <div class="section">
             <h2>Noisy intermediate state quantum computing</h2>
             <p>
-                So given that quantum computers exist, and quantum algorithms exist, why have we not seen a noticeable change in our lives? The issue lies in scale. We can only execute these algorithms on a small number of qubits at a small circuit depth before noise becomes the dominating issue. For reference, RSA-2048 is a popular encryption algorithm relying on the difficulty of factoring a large semiprime number. With a classical computer, it is estimated that it would take somewhere in the neighbourhood of 300 trillion years to break. If we could utilize Shor’s algorithm to speed this up, we could crack it in 8 hours. Doing this however, would require a little over 2.6 billion toffoli gates. If we assume an error rate of 0.001% (much better than our current quantum computers), we will receive an error free result with a rate of $$0.99999^{2600000000}$$ or roughly never. 
+                So given that quantum computers exist, and quantum algorithms exist, why have we not seen a noticeable change in our lives? The issue lies in scale. We can only execute these algorithms on a small number of qubits at a small circuit depth before noise becomes the dominating issue. For reference, RSA-2048 is a popular encryption algorithm relying on the difficulty of factoring a large semiprime number. With a classical computer, it is estimated that it would take somewhere in the neighbourhood of 300 trillion years to break. If we could utilize Shor's algorithm to speed this up, we could crack it in 8 hours. Doing this however, would require a little over 2.6 billion gate operations. If we assume an error rate of 0.001% (much better than our current quantum computers), we will receive an error free result with a rate of \(0.99999^{2600000000}\) or roughly never. 
             </p>
+            <figure>
+                <img src="assets/chart.svg">
+                <figcaption>Probability of receiving an error free result vs circuit depth. The probability of receiving a useful result quickly drops to 0 before reaching the depth needed to perform Shor's algorithm to decrypt RSA-2048.</figcaption>
+            </figure>
             <p>
                 However, a recent <a href="https://s7d9.scene7.com/is/content/quantum/LQ_ErrorCorrectionpdf">paper from Microsoft Azure and Quantinuum</a> suggest a promising step towards less noisy quantum computers. They have managed to demonstrate the use of logical qubits to reduce error rates by a factor of as much as 800x the physical level. While this does not yet signify a universal fault-tolerant quantum computer, it is one step closer to a beyond-NISQ future. 
             </p>
